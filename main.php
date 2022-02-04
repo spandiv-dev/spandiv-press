@@ -3,7 +3,7 @@
 Plugin Name: Spandiv
 Plugin URI: https://spandiv.xyz/
 Description: Custom Wordpress Features.
-Version: 1.0.0
+Version: 1.1
 Author: Spandiv
 Author URI: https://spandiv.xyz/
 License: GPL2
@@ -43,10 +43,13 @@ function addAdminPageContent() {
 
 require 'plugin-update/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-  'http://example.com/path/to/details.json',
+  'https://github.com/praseetyaa/spandiv-press.git',
   __FILE__, //Full path to the main plugin file or functions.php.
   'unique-plugin-or-theme-slug'
 );
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
 
 include('partials/plugin-header.php');
 
