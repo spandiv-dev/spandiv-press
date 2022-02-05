@@ -1,8 +1,11 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?= plugin_dir_url(__DIR__) ?>/assets/app.css">
+
 <div class="wrap">
   <div class="heading">
     <h2>
       <span>Spandiv</span>
-      <span>Addtional Plugin</span>
+      <span>Additional Plugin</span>
     </h2>
   </div>
 
