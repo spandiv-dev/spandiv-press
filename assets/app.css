@@ -19,6 +19,8 @@ Description: Dilarang mengubah tanpa izin! kontak dev.spandiv@gmail.com untuk me
     --white: #FFFFFF;
 }
 
+body {background: #f0f0f1;}
+
 .rounded-1 {border-radius: .1rem !important;}
 .rounded-2 {border-radius: .25rem !important;}
 .rounded-3 {border-radius: .3rem !important;}
