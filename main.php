@@ -3,7 +3,7 @@
 Plugin Name: Spandiv
 Plugin URI: https://spandiv.xyz/
 Description: Custom Wordpress Features.
-Version: 1.4.4
+Version: 1.4.5
 Author: Spandiv
 Author URI: https://spandiv.xyz/
 License: GPL2
@@ -41,7 +41,12 @@ function addAdminPageContent() {
   add_menu_page('Spandiv', 'Spandiv', 'manage_options' ,__FILE__, 'crudAdminPage', plugins_url( 'spandiv/assets/icon.png' ) );
 }
 
-include_once('partials/plugin-header.php');
+function spandiv_enqueue_scripts() {
+	wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');
+	wp_enqueue_style('spandiv_css', plugin_dir_url(__FILE__).'/assets/app.css');
+	wp_enqueue_script('spandiv_js', 'https://web.spandiv.xyz/wp-content/themes/spandiv/assets/js/control.js');
+}
+add_action('admin_enqueue_scripts', 'spandiv_enqueue_scripts');
 
 include('functions/crud.php');
 
