@@ -4,7 +4,7 @@
 Plugin Name: Spandiv
 Plugin URI: https://spandiv.xyz/
 Description: Custom WordPress Features.
-Version: 1.4.7
+Version: 1.5.0
 Author: Spandiv
 Author URI: https://spandiv.xyz/
 License: GPL2
@@ -21,7 +21,7 @@ register_activation_hook(__FILE__, array('Spandiv_Plugin', 'create_table'));
 add_action('admin_menu', array('Spandiv_Plugin', 'add_admin_page'));
 
 // Add shortcode
-add_shortcode('s_get', array('Spandiv_Plugin', 'get_value_for_shortcode'));
+add_shortcode('spandiv', array('Spandiv_Plugin', 'get_value_for_shortcode'));
 
 // Functions
 require_once('functions/notice.php');

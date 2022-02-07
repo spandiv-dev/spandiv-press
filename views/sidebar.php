@@ -1,8 +1,7 @@
 <?php 
-  $product_api = file_get_contents("https://web.spandiv.xyz/wp-json/spandiv/v1/random-product/");
+  $product_api = file_get_contents("https://spandiv.xyz/wp-json/spandiv/v1/random-product/");
   $product = json_decode($product_api, true);
 ?>
-
 
 <div class="col-lg-3 d-block">
   <div class="card border-0 shadow-sm sticky-top" style="position: sticky;top:3rem">
@@ -14,10 +13,10 @@
           <div class="col text-start">
               <p class="mb-0 fw-bold text-truncate"><?= $product['post_title'] ?></p>
       			  <span>
-      				  <h2 class="my-2 fw-bold text-primary">Rp <?= $product['price'] ?></h2>
-      				  <?php if(count($product['category']) > 0 ): ?>
-      				  <span class="badge bg-primary"><?= $product['category'][0]['name'] ?></span>
-      				  <?php endif ?>
+      				  <p class="h2 my-2 fw-bold text-primary">Rp <?= $product['price'] ?></p>
+      				  <?php foreach($product['category'] as $category) : ?>
+      				  <span class="badge bg-primary"><?= $category['name'] ?></span>
+      				  <?php endforeach ?>
       			  </span>
           </div>
         </div>
