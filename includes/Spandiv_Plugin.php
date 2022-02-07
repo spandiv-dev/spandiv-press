@@ -23,6 +23,14 @@ class Spandiv_Plugin {
         else
             return '';
     }
+	
+	// Sync member
+	static function sync_member() {
+		$api_params = array(
+			'url' => home_url()
+		);
+		$response = wp_remote_post("https://spandiv.xyz/wp-json/spandiv/v1/sync-member", array('timeout' => 15, 'sslverify' => false, 'body' => $api_params));
+	}
 
     // Create table
     function create_table() {
@@ -75,6 +83,9 @@ class Spandiv_Plugin {
 
         // View
         include_once(self::plugin_dir_path('views/index.php'));
+		
+		// Sync member
+		self::sync_member();
     }
 
     // Get setting value for shortcode
