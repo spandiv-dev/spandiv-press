@@ -19,9 +19,23 @@ function general_admin_notice(){
     <?php }
 }
 
+/*
 $result = file_get_contents("https://spandiv-dddf8-default-rtdb.asia-southeast1.firebasedatabase.app/status.json");
 $status = json_decode($result, true);
 if ($status['active'] == 1) {
+  add_action('admin_notices', 'general_admin_notice');
+}
+*/
+
+$root_url = "https://spandiv.xyz";
+if($root_url != home_url()) {
+  $result = file_get_contents($root_url."/wp-json/spandiv/v1/get-member?url=" . home_url());
+  $result = json_decode($result, true);
+  if($result['member_banner'] == 1) {
+    add_action('admin_notices', 'general_admin_notice');
+  }
+}
+else {
   add_action('admin_notices', 'general_admin_notice');
 }
 
