@@ -67,3 +67,4 @@ body {background: #f0f0f1;}
 .notice-warning {
     border-left-color: var(--primary);
 }
+code.shortcode {cursor: pointer;}
