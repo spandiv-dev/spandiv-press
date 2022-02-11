@@ -3,6 +3,11 @@
 if(!class_exists('Spandiv_Plugin')) {
 
 class Spandiv_Plugin {
+    // Get root URL
+    static function root_url() {
+        return "https://spandiv.xyz";
+    }
+
     // Get plugin URL
     static function plugin_url($file) {
         return plugins_url($file, __DIR__);
@@ -24,13 +29,13 @@ class Spandiv_Plugin {
             return '';
     }
 	
-	// Sync member
-	static function sync_member() {
-		$api_params = array(
-			'url' => home_url()
-		);
-		$response = wp_remote_post("https://spandiv.xyz/wp-json/spandiv/v1/sync-member", array('timeout' => 15, 'sslverify' => false, 'body' => $api_params));
-	}
+    // Sync member
+    static function sync_member() {
+        $api_params = array(
+            'url' => home_url()
+        );
+        $response = wp_remote_post("https://spandiv.xyz/wp-json/spandiv/v1/sync-member", array('timeout' => 15, 'sslverify' => false, 'body' => $api_params));
+    }
 
     // Create table
     function create_table() {
@@ -84,8 +89,8 @@ class Spandiv_Plugin {
         // View
         include_once(self::plugin_dir_path('views/index.php'));
 		
-		// Sync member
-		self::sync_member();
+        // Sync member
+        self::sync_member();
     }
 
     // Get setting value for shortcode
@@ -101,6 +106,24 @@ class Spandiv_Plugin {
             return $data[0]->setting_value;
         else
             return '';
+    }
+
+    // Banner ads
+    function general_admin_notice() {
+        global $pagenow;
+        $admin_pages = [ 'index.php', 'edit.php', 'plugins.php', 'themes.php', 'admin.php' ];
+        if ( in_array( $pagenow, $admin_pages ) ) { ?>
+            <link rel="stylesheet" href="<?= plugin_dir_url(__DIR__) ?>/assets/app.css">
+            <div class="notice notice-warning is-dismissible rounded-3 d-flex position-relative" style="overflow:hidden;">
+                <div>
+                    <p style="line-height: 10px;" class="text-primary"><b>Spandiv</b></p>
+                    <p style="line-height: 10px;">Jasa pembuatan website terbaik dan termurah <a href="https://spandiv.xyz/" target="_blank">Klik disini</a></p>
+                </div>
+                <picture style="right: 0; left: auto; position: absolute; pointer-events: none; min-height: 100%; display: block; top: -35px">
+                    <img alt="Spandiv Campaign" src="<?= plugin_dir_url(__DIR__) ?>/assets/banner.png" decoding="async" style="width: 180px; display: block; height: 100%; max-width: initial;">
+                </picture>
+            </div>
+        <?php }
     }
 }
 

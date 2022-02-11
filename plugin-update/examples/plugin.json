@@ -1,7 +1,7 @@
 {
 	"name": "Spandiv",
-	"version": "1.5.3",
-	"download_url": "https://github.com/praseetyaa/spandiv-press/archive/refs/heads/main.zip",
+	"version": "1.5.4",
+	"download_url": "https://github.com/spandiv-dev/spandiv-press/archive/refs/heads/main.zip",
 
 	"homepage": "http://spandiv.xyz/",
 	"requires": "4.5",
