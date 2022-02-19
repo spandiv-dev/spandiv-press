@@ -1,6 +1,6 @@
-<?php 
-  $product_api = file_get_contents("https://spandiv.xyz/wp-json/spandiv/v1/random-product/");
-  $product = json_decode($product_api, true);
+<?php
+  $product_api = wp_remote_get("https://spandiv.xyz/wp-json/spandiv/v1/random-product/");
+  $product = json_decode($product_api['body'], true);
 ?>
 
 <div class="col-lg-3 d-block">
