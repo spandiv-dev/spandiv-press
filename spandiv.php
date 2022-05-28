@@ -4,7 +4,7 @@
 Plugin Name: Spandiv
 Plugin URI: https://spandiv.xyz/
 Description: Custom WordPress Features.
-Version: 1.5.7 
+Version: 1.5.8
 Author: Spandiv
 Author URI: https://spandiv.xyz/
 License: GPL2
