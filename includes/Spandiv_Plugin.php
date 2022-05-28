@@ -117,9 +117,8 @@ class Spandiv_Plugin {
             <link rel="stylesheet" href="<?= plugin_dir_url(__DIR__) ?>/assets/app.css">
             <div class="notice notice-warning is-dismissible rounded-3 d-flex position-relative" style="overflow:hidden;">
                 <div>
-                    <p style="line-height: 10px;" class="text-primary"><b>Spandiv</b></p>
-                    <p style="line-height: 10px;">Jasa pembuatan website terbaik dan termurah <a href="https://spandiv.xyz/" target="_blank">Klik disini</a></p>
-                </div>
+                    <p style="line-height: 10px;" class="text-primary"><b>Spandiv Digital Solutions</b></p>
+                    <p style="line-height: 10px;">Creative &amp; digital agency, praktis buat produk digital, branding dan website. <a href="https://spandiv.xyz/" target="_blank">Klik di sini</a></p>
                 <picture style="right: 0; left: auto; position: absolute; pointer-events: none; min-height: 100%; display: block; top: -35px">
                     <img alt="Spandiv Campaign" src="<?= plugin_dir_url(__DIR__) ?>/assets/banner.png" decoding="async" style="width: 180px; display: block; height: 100%; max-width: initial;">
                 </picture>
