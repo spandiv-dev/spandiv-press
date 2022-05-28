@@ -62,7 +62,8 @@ class Spandiv_Plugin {
             'manage_options', // Capability
             'spandiv', // Menu slug
             array('Spandiv_Plugin', 'crud_page'), // Callable
-            self::plugin_url('assets/icon.png') // Icon URL
+            'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSIjYTdhYWFkIiBjbGFzcz0ic3BhbmRpdi1nZWFyIj4NCjxwYXRoIGNsYXNzPSJzdDAiIGZpbGw9IiNhN2FhYWQiIGQ9Ik04LDBDMy42LDAsMCwzLjYsMCw4czMuNiw4LDgsOHM4LTMuNiw4LThTMTIuNCwwLDgsMHogTTUuNCw0YzAuNS0wLjcsMS4zLTEuMSwyLjEtMS4yYzAuMiwwLDAuNCwwLDAuNiwwaDMuMg0KCWMwLDAuOC0wLjMsMS42LTAuOSwyLjJDOS45LDUuNSw5LjMsNS44LDguNiw1LjljLTAuMiwwLTAuNSwwLTAuNywwYy0xLjEsMC0yLjEsMC0zLjIsMEM0LjcsNS4yLDQuOSw0LjUsNS40LDR6IE03LjgsNi40DQoJYzAuMywwLDAuNiwwLDAuOSwwYzAuOCwwLjEsMS42LDAuNiwyLDEuMmMwLjQsMC41LDAuNiwxLjIsMC42LDEuOWMtMSwwLTIuMSwwLTMuMSwwYy0wLjMsMC0wLjUsMC0wLjgsMEM2LjYsOS40LDUuOSw5LDUuNCw4LjQNCgljLTAuNS0wLjYtMC43LTEuMy0wLjctMkM1LjcsNi40LDYuNyw2LjQsNy44LDYuNHogTTEwLjYsMTIuMWMtMC41LDAuNi0xLjMsMS0yLjEsMS4xYy0wLjIsMC0wLjQsMC0wLjYsMEg0LjdjMC0wLjYsMC4yLTEuMiwwLjUtMS43DQoJYzAuNC0wLjYsMS0xLjEsMS42LTEuM2MwLjMtMC4xLDAuNy0wLjIsMS4xLTAuMmMxLjIsMCwyLjMsMCwzLjUsMEMxMS4zLDEwLjgsMTEuMSwxMS41LDEwLjYsMTIuMXoiLz4NCjwvc3ZnPg0K' // Icon URL
+			
         );
     }
 
