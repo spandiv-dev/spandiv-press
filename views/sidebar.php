@@ -17,7 +17,7 @@
       				  <span class="badge bg-primary"><?= $category['name'] ?></span>
       				  <?php endforeach ?>
       			  </span>
-          </div>
+          </div> 
         </div>
         <hr>
         <p><?= $product["post_excerpt"] ?></p>
