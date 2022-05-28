@@ -5,11 +5,11 @@
 
 	"homepage": "http://spandiv.xyz/",
 	"requires": "4.5",
-	"tested": "4.8",
-	"last_updated": "2017-01-01 16:17:00",
+	"tested": "6.0",
+	"last_updated": "2022-29-05 16:17:00",
 	"upgrade_notice": "Here's why you should upgrade...",
 
-	"author": "Janis Elsts",
+	"author": "Spandiv",
 	"author_homepage": "http://example.com/",
 
 	"sections": {
